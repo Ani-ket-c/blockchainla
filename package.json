@@ -1,0 +1,45 @@
+{
+  "name": "nexus-x402",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Nexus402 - Autonomous Multi-Agent Service Mesh & SLA-Backed HTTP 402 Micropayment Protocol",
+  "main": "server/src/server.ts",
+  "scripts": {
+    "server": "tsx server/src/server.ts",
+    "client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm --prefix client run build && tsc -p server/tsconfig.json",
+    "test": "vitest run tests",
+    "demo": "tsx scripts/demo.ts"
+  },
+  "keywords": [
+    "x402",
+    "http-402",
+    "ai-agents",
+    "erc-402",
+    "micropayments",
+    "ethereum",
+    "base",
+    "eip-712",
+    "autonomous-agents",
+    "devcon",
+    "loops-house"
+  ],
+  "author": "Nexus402 Team",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
